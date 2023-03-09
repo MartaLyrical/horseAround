@@ -12,6 +12,14 @@ stablesRouter.get('/',
     )
 )
 
+// GET/stables/{stablesId}
+stablesRouter.get('/:id',
+    tryCatch(
+        //swagger docs code goes here
+        stablesController.getOne
+    )
+)
+
 // GET/stables/inventory
 stablesRouter.get('/inventory',
     tryCatch(
@@ -27,15 +35,6 @@ stablesRouter.post('/order',
         stablesController.addOrder
     )
 )
-
-// GET/stables/{stablesId}
-stablesRouter.get('/:id',
-    tryCatch(
-        //swagger docs code goes here
-        stablesController.getOne
-    )
-)
-
 
 // DELETE/stables/{stablesId}
 stablesRouter.delete('/:id',
