@@ -1,7 +1,7 @@
 const stablesSchema = require('../Schema/stables')
 
 // GET/stables/inventory
-const getInventory = async(req, res) => {
+const getInventory = async (req, res) => {
     const stablesInventory = await stablesSchema.find()
 
     if (!stablesInventory) {
@@ -13,9 +13,9 @@ const getInventory = async(req, res) => {
 }
 
 // GET/allstables/
-const getAll = async(req, res) => {
+const getAll = async (req, res) => {
     const allStables = await stablesSchema.find()
-    res.status(200).json('allStables')
+    res.status(200).json(allStables)
 
 }
 
